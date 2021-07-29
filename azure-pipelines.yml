@@ -18,6 +18,7 @@ steps:
 
 
 - script: |
+    echo '$(Build.SourcesDirectory)/1. Frontend/msa-yearbook'
     npm install
     npm run build
   displayName: 'npm install and build'
