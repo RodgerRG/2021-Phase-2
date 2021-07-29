@@ -4,8 +4,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ApolloProvider } from '@apollo/client';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import graphQLClient from './GraphQLClient';
+
+const client = new ApolloClient({
+  uri: "https://github.com/graphql",
+  cache: new InMemoryCache()
+});
 
 ReactDOM.render(
   <Router>
